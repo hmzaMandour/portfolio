@@ -2,6 +2,8 @@ import React from 'react';
 import profilepic from '../../assets/images/avatar.jpeg';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
+import Lottie from "lottie-react";
+import done3 from '../../json/Animation - 1728750548761.json'
 
 export const Hero = () => {
     const direction = 'down'; // Set your direction here
@@ -25,24 +27,25 @@ export const Hero = () => {
     };
 
     return (
-        <div className='border-b border-neutral-900 pb-4 lg:mb-35'>
-            <div className='flex flex-wrap'>
+        <div className='border-b border-gray-500 pb-4 lg:mb-35 px-5'>
+            <div className='flex flex-wrap '>
                 <motion.div
                     className='w-full lg:w-1/2'
                     variants={variants}
                     initial="initial"
-                    animate="animate"
+                    whileInView="animate"
                     exit="exit"
+                    viewport={{ once: true, amount: 0.5 }} 
                 >
                     <div className='flex flex-col text-white items-center lg:items-start'>
-                        <h1 className='pb-16 text-6xl font-thin tracking-tighter lg:mt-16 lg:text-7xl'>
-                            Hamza Mandour
+                        <h1 className='pb-16 text-purple-900 font-extrabold lg:w-[20vw] text-6xl text-center  font-thin tracking-tighter lg:mt-16 lg:text-6xl'>
+                            Magic is something we do!
                         </h1>
 
-                        <span className='bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tighter text-transparent'>
+                        <span className='bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 font-bold bg-clip-text text-4xl tracking-tighter text-transparent'>
                             <TypeAnimation
                                 sequence={[
-                                    'Hello, I am Hamza Mandour.',
+                                    'Hello, I am Hamza .',
                                     2000,
                                     'A Full Stack Developer.',
                                     2000,
@@ -55,21 +58,22 @@ export const Hero = () => {
                             />
                         </span>
 
-                        <p className='my-2 max-w-xl py-6 font-light tracking-tighter'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolor facilis omnis adipisci rerum cupiditate qui similique delectus numquam id nulla ut ea tempore quos aspernatur suscipit voluptas ullam sunt, repellat dolorum impedit sint consequuntur eligendi eaque! Beatae, cum earum!
+                        <p className='my-2 max-w-xl py-6 font-light text-gray-500 tracking-tighter hover:text-gray-400 font-semibold'>
+                                In the world of software, I believe that true success is not just about building great technology but creating solutions that bring value to people's lives. My goal is to design and develop software that simplifies processes, solves real-world problems, and makes a positive impact.
                         </p>
                     </div>
                 </motion.div>
 
                 <motion.div
-                    className='w-full lg:w-1/2 flex items-center justify-center lg:justify-end lg:p-8'
+                    className='w-full lg:w-1/2 flex items-center justify-center lg:justify-end lg:p-8 '
                     variants={variants}
                     initial="initial"
-                    animate="animate"
+                    whileInView="animate"
                     exit="exit"
+                    viewport={{ once: true, amount: 0.5 }} 
                 >
                     <div>
-                        <img src={profilepic} alt="Hamza Mandour" className='w-72 rounded-full' />
+                        <Lottie  animationData={done3} />
                     </div>
                 </motion.div>
             </div>

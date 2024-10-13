@@ -2,6 +2,10 @@ import React from 'react';
 import { Navbar } from '../layouts/navbar';
 import { Hero } from './hero/hero';
 import { About } from './about/about';
+import { Skills } from './skills/skillls';
+import { Contact } from './contact/contact';
+import { Footer } from '../layouts/footer';
+import { Project } from './projects/project';
 
 export const Home = () => {
     return (
@@ -11,11 +15,16 @@ export const Home = () => {
             </div>
 
 
-            <div className='container mx-auto px-8'>
+            <div className='container mx-auto flex flex-col gap-10'>
                 <Navbar />
                 <Hero />
                 <About />
+                <Skills />
+                <Project />
+                <Contact />
             </div>
+            <Footer />
+
             
         </div>
     );
